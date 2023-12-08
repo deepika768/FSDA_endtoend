@@ -1,11 +1,24 @@
-import os
-from pathlib import Path
+from setuptools import find_packages,setup
+from typing import List
 
-path="notebooks/research.ipynb"
+"""HYPEN_E_DOT='-e .'
 
-dir,file=os.path.split(path)
+def get_requirements(file_path:str)->List[str]:
+    requirements=[]
+    with open(file_path) as file_obj:
+        requirements=file_obj.readlines()
+        requirements=[req.replace("\n","") for req in requirements]
 
-os.makedirs(dir,exist_ok=True)
+        if HYPEN_E_DOT in requirements:
+            requirements.remove(HYPEN_E_DOT)
 
-#with open(file,"w") as f:
-   # pass
+    return requirements"""
+
+setup(
+    name='DimondPricePrediction',
+    version='0.0.1',
+    author='sunny savita',
+    author_email='sunny.savita@ineuron.ai',
+    install_requires=["scikit-learn","pandas","numpy"],
+    packages=find_packages()
+)
