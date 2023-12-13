@@ -5,7 +5,7 @@ import os
 import sys
 from src.DimondPricePrediction.logger import logging
 
-from src.DimondPricePrediction.exceptions import customexception 
+from src.DimondPricePrediction.exception import customexception 
 
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
@@ -25,10 +25,12 @@ class DataIngestion:
         logging.info("data ingestion started")
 
         try:
-            data=pd.read_csc(Path(os.path.join("notebooks/data","gemstone.csv")))
+            data=pd.read_csv(Path(os.path.join("notebooks/data","gemstone.csv")))
             logging.info("i have read dataset as a df")
 
-            os.makedirs(os.path.join(self.ingestion_config.raw_data_path),exists=True)
+    
+
+            os.makedirs(os.path.dirname(os.path.join(self.ingestion_config.raw_data_path)),exist_ok=True)
             data.to_csv(self.ingestion_config.raw_data_path,index=False)
             logging.info("i have saved the raw dataset in artifact folder")
 
@@ -42,6 +44,14 @@ class DataIngestion:
             test_data.to_csv(self.ingestion_config.test_data_path,index=False)
             
             logging.info("Data Ingestion Part Completed.")
+            
+            return (
+                 
+                
+                self.ingestion_config.train_data_path,
+                self.ingestion_config.test_data_path
+            )
+
 
         except Exception as e:
             logging.info("exception during occured at data ingestion stage")
