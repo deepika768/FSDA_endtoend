@@ -19,6 +19,6 @@ setup(
     version='0.0.1',
     author='Deepika Sahu',
     author_email='sahudeepika471@gmail.com',
-    install_requires=["scikit-learn","pandas","numpy"],
+    install_requires=["scikit-learn","pandas","numpy","Flask"],
     packages=find_packages()
 )
