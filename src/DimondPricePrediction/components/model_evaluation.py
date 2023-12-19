@@ -52,7 +52,7 @@ class ModelEvaluation:
                 mlflow.log_metric("r2", r2)
                 mlflow.log_metric("mae", mae)
 
-
+                # this condition is for the dagshub
                 # Model registry does not work with file store
                 if tracking_url_type_store != "file":
 
