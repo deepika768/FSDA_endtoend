@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/FSDA_endtoend/mlruns/0/7a7d17784e914595a0737702fbc472fc/artifacts
+end_time: 1702994333192
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7a7d17784e914595a0737702fbc472fc
+run_name: amusing-dolphin-651
+run_uuid: 7a7d17784e914595a0737702fbc472fc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1702994326739
+status: 3
+tags: []
+user_id: sahud

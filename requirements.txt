@@ -2,7 +2,9 @@ pandas
 scikit-learn
 numpy
 ipykernel
-Flask
+flask
+mlflow==2.2.2
+dvc
 
 
 

@@ -2,8 +2,11 @@ import os
 import sys
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 from urllib.parse import urlparse
+
 import mlflow
+
 import mlflow.sklearn
+
 import numpy as np
 import pickle
 from src.DimondPricePrediction.utils.utils import load_object
@@ -31,7 +34,7 @@ class ModelEvaluation:
 
         
 
-            mlflow.set_registry_uri("https://dagshub.com/sunny.savita/fsdsmendtoend.mlflow")
+            mlflow.set_registry_uri("https://dagshub.com/deepika768/FSDA_endtoend.mlflow ")
             
             tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
             
